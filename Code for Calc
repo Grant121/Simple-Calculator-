@@ -1,0 +1,107 @@
+using System;
+
+public class SimpleCalculatorAssignmentPOP
+{
+    // valid method
+    public static void Main(string[] args)
+    { // invalid method- wont work
+        while (true)
+        {
+            Console.WriteLine("Do you want to add, sub, divide, multiply"); //telling user to input what they want to do (operation).
+
+            string operation = Console.ReadLine(); //takes users input and stores it in a variable.
+
+            if (operation == "add") //calling the add method.
+
+            {
+                addMethod();
+            }
+
+            else if (operation == "sub")//calling the sub method
+
+            {
+                subMethod();
+            }
+
+            else if (operation == "divide")//calling the divide method
+
+            {
+                divideMethod();
+
+            }
+
+            else if (operation == "multiply")//calling the multiply method
+
+            {
+                multiplyMethod();
+
+            }
+
+            else if (operation == "done")// operation for the user, if they are done, program will break.
+
+            {
+                break;
+            }
+
+            else
+
+            {
+                Console.WriteLine("Start over and put correct inputs.");//if user puts in wrong information, programme will ask user to put in correct inputs.
+
+            }
+        }
+
+    }
+    static void addMethod() //start of methods (add).
+    {
+        Console.Write("Input a number:");// asks user to input a number.
+        double num01 = Convert.ToDouble(Console.ReadLine());//stores the first number as a variable
+
+        Console.Write("Input a second number:");//asks user to input a second number.
+        double num02 = Convert.ToDouble(Console.ReadLine());//stores the second number as a variable.
+
+        double result = (num01 + num02);//is the adding of the 2 users inputs.
+        Console.WriteLine("The Result is:" + result);//this is the programme showing the result.
+
+        Console.WriteLine("If you are finished, enter done, if you want to continue, enter next equation");
+    }
+    static void subMethod()//method (sub).
+    {
+        Console.Write("Input a number:");// asks user to input a number.
+        double num01 = Convert.ToDouble(Console.ReadLine());//stores the first number as a variable
+
+        Console.Write("Input a second number:");//asks user to input a second number.
+        double num02 = Convert.ToDouble(Console.ReadLine());//stores the second number as a variable.
+
+        double result = (num01 - num02);//is the subbing of the 2 users inputs.
+        Console.WriteLine("The Result is:" + result);//this is the programme showing the result.
+
+        Console.WriteLine("If you are finished, enter done, if you want to continue, enter next equation");
+    }
+    static void divideMethod()//method (divide)
+    {
+        Console.Write("Input a number:");// asks user to input a number.
+        double num01 = Convert.ToDouble(Console.ReadLine());//stores the first number as a variable
+
+        Console.Write("Input a second number:");//asks user to input a second number.
+        double num02 = Convert.ToDouble(Console.ReadLine());//stores the second number as a variable.
+
+        double result = (num01 / num02);//is the dividing of the 2 users inputs.
+        Console.WriteLine("The Result is:" + result);//this is the programme showing the result.
+
+        Console.WriteLine("If you are finished, enter done, if you want to continue, enter next equation");
+    }
+    static void multiplyMethod()//method (multiply)
+    {
+        Console.Write("Input a number:");// asks user to input a number.
+        double num01 = Convert.ToDouble(Console.ReadLine());//stores the first number as a variable
+
+        Console.Write("Input a second number:");//asks user to input a second number.
+        double num02 = Convert.ToDouble(Console.ReadLine());//stores the second number as a variable.
+
+        double result = (num01 * num02);//is the multiplying of the 2 users inputs.
+        Console.WriteLine("The Result is:" + result);//this is the programme showing the result.
+
+        Console.WriteLine("If you are finished, enter done, if you want to continue, enter next equation");
+    }
+}
